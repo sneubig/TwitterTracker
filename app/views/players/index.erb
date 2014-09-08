@@ -1,0 +1,10 @@
+<h1> Players </h1>
+
+<% @players.each do |t| %>
+	<%= t.name %>
+	<%= t.position %>
+	<%= t.team %>
+	<%= t.twitter_username %>
+	<%= t.photo_url %>
+
+<% end %>
