@@ -1,11 +1,79 @@
 <div class="list-of-players">
 <h3> Players </h3>
-<% @players.each do |t| %>
-	<h4><%= link_to t.name, player_path(t.id) %> </h4>
+<% @players.each do |player| %>
+	<h4><%= link_to player.name, player_path(player.id) %> </h4>
 	<!-- link_to image_tag(t.photo_url), player_path(t.id) -->
 <% end %>
 </div>
 
-<%= collection_select(:position, :name, Player.all, :id, :name) %>
 
 
+
+
+
+
+<select name="position_id">
+	<option value=''>Quarterback</option>
+	<% @players.where("position_id = 1").each do |player| %>
+	  <option value="<%= player.position_id %>"><%= player.name %></option>
+	<% end %>
+</select>
+
+<select name="position_id">
+	<option value=''>Runningback</option>
+	<% @players.where("position_id = 2").each do |player| %>
+	  <option value="<%= player.position_id %>"><%= player.name %></option>
+	<% end %>
+</select>
+
+<select name="position_id">
+	<option value=''>Wide Receiver</option>
+	<% @players.where("position_id = 3").each do |player| %>
+	  <option value="<%= player.position_id %>"><%= player.name %></option>
+	<% end %>
+</select>
+
+<select name="position_id">
+	<option value=''>Tightend</option>
+	<% @players.where("position_id = 4").each do |player| %>
+	  <option value="<%= player.position_id %>"><%= player.name %></option>
+	<% end %>
+</select>
+
+<select name="position_id">
+	<option value=''>Cornerback</option>
+	<% @players.where("position_id = 5").each do |player| %>
+	  <option value="<%= player.position_id %>"><%= player.name %></option>
+	<% end %>
+</select>
+
+
+
+<!-- <option value="true">Running Back</option>
+<option value="Gender">Wide Receiver</option>
+<option value="Gender">Tight End</option>
+<option value="Gender">Cornerback</option> 
+</select>
+
+
+
+
+<select name="city[country_id]" placeholder="Quarterback">
+  <optgroup label="Africa">
+    <option value="1">South Africa</option>
+    <option value="3">Somalia</option>
+  </optgroup>
+  <optgroup label="Europe">
+    <option value="7" selected="selected">Denmark</option>
+    <option value="2">Ireland</option>
+  </optgroup>
+</select> -->
+
+<!-- 
+<select name="post[category]">
+  <option>Funny</option>
+  <option>joke</option>
+  <option>poem</option>
+</select>
+
+<select_tag 'person', options_from_collection_for_select(@people, 'id', 'name')> -->

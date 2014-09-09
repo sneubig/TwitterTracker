@@ -2,6 +2,7 @@ html {
 	background-image: url(http://d3thflcq1yqzn0.cloudfront.net/025288742_prevstill.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 100%;
 }
 
 header {
@@ -31,18 +32,32 @@ header {
 	float: left;
 	text-align: center;
 	background: white;
-	margin-left: 10%;
+	margin-left: 5%;
 	margin-top: 5%;
+	width: 30%;
+	height: 400px;
 }
 
 .player-tweets {
 	border: 2px solid black;
 	background: white;
-	height: 600px;
+	height: 400px;
 	width: 50%;
 	float: right;
 	margin-top: 5%;
-	margin-right: 10%;
+	margin-right: 5%;
+}
+
+img {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: -4px;
+	height: 295px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
 }
 
 
