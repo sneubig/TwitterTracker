@@ -1,3 +1,5 @@
+require 'twitter'
+
 class PlayersController < ApplicationController
 
 	def index
@@ -6,6 +8,7 @@ class PlayersController < ApplicationController
 
 	def show
 		@player = Player.find(params[:id])
+		@manziel_tweets = Tweet.new.get_tweets
 	end
 
 end
