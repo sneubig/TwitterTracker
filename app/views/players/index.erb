@@ -1,10 +1,11 @@
-<h1> Players </h1>
-
+<div class="list-of-players">
+<h3> Players </h3>
 <% @players.each do |t| %>
-	<%= t.name %>
-	<%= t.position %>
-	<%= t.team %>
-	<%= t.twitter_username %>
-	<%= t.photo_url %>
-
+	<h4><%= link_to t.name, player_path(t.id) %> </h4>
+	<!-- link_to image_tag(t.photo_url), player_path(t.id) -->
 <% end %>
+</div>
+
+<%= collection_select(:position, :name, Player.all, :id, :name) %>
+
+

@@ -1,3 +1,56 @@
+html {
+	background-image: url(http://d3thflcq1yqzn0.cloudfront.net/025288742_prevstill.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header {
+	text-align: center;
+	background: rgba(255,255,255,.8);
+	color: white;
+	padding: 10px;
+}
+
+/******* Players#Index ***********/
+
+.list-of-players {
+	background: white;
+	width: 25%;
+	margin: 0 auto;
+	margin-top: 5%;
+	text-align: center;
+	padding: 5px;
+	border: 2px solid black;
+}
+
+
+/******* Players#Show ***********/
+
+.player-info {
+	border: 2px solid black;
+	float: left;
+	text-align: center;
+	background: white;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.player-tweets {
+	border: 2px solid black;
+	background: white;
+	height: 600px;
+	width: 50%;
+	float: right;
+	margin-top: 5%;
+	margin-right: 10%;
+}
+
+
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
