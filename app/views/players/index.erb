@@ -1,15 +1,67 @@
 <div class="list-of-players">
-<h3> Players </h3>
+<h3> Featured Players </h3>
 <% @players.each do |player| %>
-	<h4><%= player.position.name %> -- <%= link_to player.name, player_path(player.id) %></h4>
+	<h4><%= link_to player.name, player_path(player.id) %></h4>
 	<!-- link_to image_tag(t.photo_url), player_path(t.id) -->
 <% end %>
 </div>
 
-<div class="all-player-tweets">
+<!-- <div class="all-player-tweets">
 	<p><%= @list_of_tweets %></p>
-</div>
+</div> -->
 
+<div class="form">
+	<p> Search by Position </p>
+	<form action="/players/1" >                
+	<select name="position_id">
+		<option value=''>Quarterback</option>
+		<% @players.where("position_id = 1").each do |player| %>
+		  <option value="<%= player.position_id %>"><%= player.name %></option>
+		<% end %>
+	</select>
+	<input type="submit" value="Submit">
+	</form>
+
+	<form action="/players/2" >
+	<select name="position_id">
+		<option value=''>Runningback</option>
+		<% @players.where("position_id = 2").each do |player| %>
+		  <option value="<%= player.position_id %>"><%= player.name %></option>
+		<% end %>
+	</select>
+	<input type="submit" value="Submit">
+	</form>
+
+	<form action="/players/3" >
+	<select name="position_id">
+		<option value=''>Wide Receiver</option>
+		<% @players.where("position_id = 3").each do |player| %>
+		  <option value="<%= player.position_id %>"><%= player.name %></option>
+		<% end %>
+	</select>
+	<input type="submit" value="Submit">
+	</form>
+
+	<form action="/players/4" >
+	<select name="position_id">
+		<option value=''>Tight End</option>
+		<% @players.where("position_id = 4").each do |player| %>
+		  <option value="<%= player.position_id %>"><%= player.name %></option>
+		<% end %>
+	</select>
+	<input type="submit" value="Submit">
+	</form>
+
+	<form action="/players/5" >
+	<select name="position_id">
+		<option value=''>Cornerback</option>
+		<% @players.where("position_id = 5").each do |player| %>
+		  <option value="<%= player.position_id %>"><%= player.name %></option>
+		<% end %>
+	</select>
+	<input type="submit" value="Submit">
+	</form>
+</div>
 
 
 

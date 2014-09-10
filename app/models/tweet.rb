@@ -17,26 +17,46 @@ class Tweet < ActiveRecord::Base
 	end
 
 	def get_tweets(username)
-		tweets = []
-		good_label = ["family"]
-		#good_label = ["family", "kids", "mom", "sponsor", "charity", "wife", "practice", "sleep", "weight room", "team", "fans", "girlfriend"]
+		great_tweets = []
+		bad_tweets = []
+		good_label = ["family", "kids", "mom", "sponsor", "charity", "wife", "practice", "sleep", "weight room", "team", "fans", "girlfriend"]
 		bad_label = ["beer", "hangover", "club", "party", "vegas", "drugs", "tired", "bieber", "shots", "injury", "bar", "arrest", "boys"]
 
-		# find_keyword = tweets.include?(bad_label).each do |input|
-		# 	input.
+		@twitter.search("from:@#{username}", :result_type => "mixed").take(5).each do |tweet|
+			# puts tweet.text
+			# tweet_words = tweet.text.split(" ")
+			# good = tweet_words.find {|word| good_label.include?(word)}
+			# bad = tweet_words.find { |word| bad_label.include?(word)}
+			# great_tweets << tweet.text if good
+			# bad_tweets << tweet.text if bad
+			great_tweets << tweet.text
+		end
+			great_tweets.join('<br><br>')
+			# bad_tweets.join('<br><br>')
+	end
 
-		@twitter.search("from:#{username}", :result_type => "mixed").take(5).each do |tweet|
+	# def self.find_good_keyword(input1, input2)
+	# 	@intersection = tweet & good_label
+	# end	
 			
+			# if tweet_words.include?(good_label)
+				# good_tweets << tweet.text
+			# end
+			# good_tweets << tweet.text + good
+			
+		
+
+			# if tweet.include?(good_label)
 			# if find_bad == nil
 			# 	tweets << tweet.text + "SUCCESS!"
 			# elsif find_bad != nil
-			# 	tweets << tweet.text + "DANGER!"
+			# 	good_tweets << tweet.text + "DANGER!"
 			# else
-				tweets << tweet.text
+			# 	great_tweets << tweet
 			# end
-  		end
-  		tweets.join('<br><br>')
-	end
+  	# 	end
+  	# 	tweets.join('<br><br>')
+
 
 	# def get_tweets(username)
 	# 	bad_tweets = []

@@ -2,20 +2,24 @@ html {
 	background-image: url(http://d3thflcq1yqzn0.cloudfront.net/025288742_prevstill.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 120%
+	height: 100%
 }
 
 header {
 	text-align: center;
 	background: rgba(255,255,255,.8);
 	color: white;
-	padding: 10px;
+	width: 100%;
 }
 
-header h1 {
+header h2 {
+	float: left;
+	width: 100%;
+	padding: 5px;
 }
 
-header h4 {
+header article {
+	padding: 5px;
 }
 
 /******* Players#Index ***********/
@@ -23,7 +27,7 @@ header h4 {
 .list-of-players {
 	background: white;
 	width: 30%;
-	margin-left: 5%;
+	margin-left: 20%;
 	margin-top: 5%;
 	text-align: center;
 	padding: 5px;
@@ -31,12 +35,21 @@ header h4 {
 	float: left;
 }
 
-.twitter-timeline {
-	margin-top: 5%;
+.form {
 	float: right;
-	margin-right: 5%;
+	width: 20%;
+	background: rgba(0,0,0,.6);
+	margin-top: 8%;
+	margin-right: 20%;
+	border: 2px solid white;
+	padding: 10px 0;
+	text-align: center;
 }
 
+.form p {
+	color: white;
+	font-size: 18px;
+}
 
 /******* Players#Show ***********/
 
@@ -54,7 +67,7 @@ header h4 {
 .player-tweets {
 	border: 2px solid black;
 	background: white;
-	height: 500px;
+	height: 400px;
 	width: 50%;
 	float: right;
 	margin-top: 5%;
@@ -77,6 +90,9 @@ a {
 	color: blue;
 }
 
+a:hover {
+	color: red;
+}
 
 
 
