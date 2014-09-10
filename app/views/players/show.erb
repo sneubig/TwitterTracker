@@ -6,5 +6,10 @@
 </div>
 
 <div class= "player-tweets">
-	<%= @manziel_tweets %>
+	<p><strong>Positives:</strong></p>
+	<p><%= @tweets.html_safe %> <p>
+	<hr>
+	<p><strong>Concerns:</strong></p>
+	<p><%= @bad_tweets.html_safe %></p> 
 </div>
+
