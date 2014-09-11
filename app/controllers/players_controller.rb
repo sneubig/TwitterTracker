@@ -11,7 +11,7 @@ class PlayersController < ApplicationController
 	def show
 		@player = Player.find(params[:id])
 
-		@good_tweets = Tweet.new.get_tweets(@player.twitter_username)
+		@bad_tweets = Tweet.new.get_tweets(@player.twitter_username)
 
 
 		# @bad_tweets = Tweet.new.get_tweets(@player.twitter_username)
