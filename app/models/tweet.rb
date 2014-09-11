@@ -9,10 +9,10 @@ class Tweet < ActiveRecord::Base
 
 	def init
 		@twitter = Twitter::REST::Client.new do |config|
-		  	config.consumer_key = 'qbtzI1FaLrni4TKVgVOA4ul0v'
-		  	config.consumer_secret = 'Z701H6d4kCz8iCT21hjPU4THJQHtte39eOYywgYWsNGOZdOvCT'
-		  	config.access_token = '208181050-siYKfP8zNdg2Hw5iltzK7j5CXlrjAb6jpMfAIFjR'
-		  	config.access_token_secret = 'vdJbL5M9KTUFqSBfnyvbCRq8QC2udXRhrrHindS1D3yIH'
+		  	config.consumer_key = ENV["TWITTER_CONSUMER_KEY"]
+		  	config.consumer_secret = ENV["TWITTER_CONSUMER_SECRET"]
+		  	config.access_token = ENV['TWITTER_ACCESS_TOKEN']
+		  	config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
 		end
 	end
 
