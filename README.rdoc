@@ -1,3 +1,29 @@
+GA WDI DC August 2014, Project 1
+
+Overview
+
+FantasyFootballTracker is a social web application designed to provide fantasy football team owners more in depth analysis on their players. Analyzing each players twitter activity searching for keywords allows us to alert owners of potential off the field concerns that could impact the players on-field performance. It was designed as a sample Rails project for the August 2014 Web Development Immersive course at General Assembly. It was developed over a 3 day sprint. 
+
+Technologies Used
+
+Ruby on Rails 4.1.5
+Twitter Search API
+PostgreSQL Database
+CSS styling
+
+
+User Stories Completed
+
+As a user I can view a list of available players
+As a user I can view an individual players tweets
+
+
+
+ERD
+
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the

@@ -24,11 +24,23 @@ header article {
 
 /******* Players#Index ***********/
 
-.list-of-players {
-	background: white;
+.instruction {
+	clear: both;
 	width: 30%;
-	margin-left: 20%;
-	margin-top: 5%;
+	background: rgba(255,255,255,.8);
+	color: black;
+	float: right;
+	padding: 2px;
+	text-align: center;
+	font-size: 18px;
+	margin: 5% 12% 0% 0%;
+	border: 5px solid red;
+}
+.list-of-players {
+	background: rgba(255,255,255,.8);
+	width: 30%;
+	margin-left: 12%;
+	margin-top: 7%;
 	text-align: center;
 	padding: 5px;
 	border: 2px solid black;
@@ -39,10 +51,10 @@ header article {
 	float: right;
 	width: 20%;
 	background: rgba(0,0,0,.6);
-	margin-top: 8%;
-	margin-right: 20%;
+	margin-top: 3%;
+	margin-right: 17%;
 	border: 2px solid white;
-	padding: 10px 0;
+	padding: 10px 5px 15px;
 	text-align: center;
 }
 

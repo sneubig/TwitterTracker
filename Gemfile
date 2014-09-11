@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'ruby 2.1.2'
+gem 'rails_12factor'
 gem 'figaro'
 gem 'twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

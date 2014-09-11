@@ -1,3 +1,11 @@
+
+<!-- Instructions -->
+<div class="instruction">
+	<p>Select a player to see how his off the field activity might impact your fantasy team on Sunday. </p>
+</div>
+
+
+<!-- List of Players -->
 <div class="list-of-players">
 <h3> Featured Players </h3>
 <% @players.each do |player| %>
@@ -6,10 +14,7 @@
 <% end %>
 </div>
 
-<!-- <div class="all-player-tweets">
-	<p><%= @list_of_tweets %></p>
-</div> -->
-
+<!-- Drop Down Menu -->
 <div class="form">
 	<p> Search by Position </p>
 	<form action="/players/1" >                
