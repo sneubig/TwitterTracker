@@ -14,11 +14,8 @@ class PlayersController < ApplicationController
 		@bad_tweets = Tweet.new.get_tweets(@player.twitter_username)
 
 
-		# @bad_tweets = Tweet.new.get_tweets(@player.twitter_username)
+		# @good_tweets = Tweet.new.get_tweets(@player.twitter_username)
 
-		# tweet.include?(bad_label).each do |word|
-		# 	tweet.include?(word)
-		# end
 	end
 
 end
